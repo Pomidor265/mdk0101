@@ -1,98 +1,121 @@
-﻿//Задание 1
+﻿//Задание 1 
 
-//Console.WriteLine("Введите длину прямоугольника:");
-//int length = Convert.ToInt32(Console.ReadLine());
-//Console.WriteLine("Введите ширину прямоугольника:");
-//int width = Convert.ToInt32(Console.ReadLine());
-//int area = length * width;
-//int perimeter = 2 * (length + width);
-//Console.WriteLine($"Площадь: {area}");
-//Console.WriteLine($"Периметр: {perimeter}");
+// int N = Convert.ToInt32(Console.ReadLine());
+// int[] massive = new int[N];
+// double sum = 0;
+// for (int i = 0; i < N; i++)
+// {
+//     massive[i] = Convert.ToInt32(Console.ReadLine());
+//     sum += massive[i];
+// }
+// double avg = sum / N;
+// for (int i = N - 1; i >=0 ; i--)
+// {
+//     Console.Write(massive[i] + " ");
+// }
+// double near = massive.OrderBy(a => Math.Abs(a - avg)).First();  
+// Console.WriteLine($"\nСреднее: {avg} ближайшее число: {near}");
 
 //Задание 2
 
-//Console.WriteLine("Введиет валюту: ");
-//double rubl = Convert.ToDouble(Console.ReadLine());
-//double dol = rubl / 84.2;
-//Console.WriteLine($"Доллары: {dol}");
+// Console.WriteLine("Кол-во студентов: ");
+// int s = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Кол-во оценок: ");
+// int g = Convert.ToInt32(Console.ReadLine());
+// int[,] massive = new int[s,g];
+
+// for (int i = 0; i < s; i++)
+// {
+//     Console.WriteLine($"Студент {i+1}");
+//     for (int j = 0; j < g; j++)
+//     {
+//         massive[i, j] = Convert.ToInt32(Console.ReadLine());
+//     }
+// }
+
+// for (int i = 0; i < s; i++)
+// {
+//     double sum = 0;
+//     for (int j = 0; j < g; j++)
+//     {
+//         sum += massive[i,j];
+//     }
+//     double avg = sum / g;
+//     Console.WriteLine($"Студент {i+1} Средняя оценка {avg}");
+// }
 
 //Задание 3
 
-//double sum = 0;
-//for(int i = 0; i < 7; i++)
-//{
-//    double a = Convert.ToDouble(Console.ReadLine());
-//    sum += a;
-//}
-//double avg = sum / 7;
-//Console.WriteLine($"Средняя температура за неделю: {avg}");
+// List<int> num = new List<int>();
+// while (true)
+// {
+//     int n = Convert.ToInt32(Console.ReadLine());
+//     if (num.Contains(n))
+//     {
+//         break;
+//     }
+//     num.Add(n);
+// }
+// foreach(int i in num)
+// {
+//     Console.Write(i + " ");
+// }
 
-//Задание 4
+// Задание 4
+// Dictionary<string, string> massive = new Dictionary<string, string>();
+// while (true)
+// {
+//     Console.WriteLine("Команды: добавить, выход, поиск, показать");
+//     string com = Console.ReadLine();
+//     if (com == "выход")
+//     {
+//         break;
+//     }
 
-//Console.WriteLine("Оценки студента 1");
-//int s1 = 0;
-//for (int i = 0; i < 5; i++)
-//{
-//    int t = Convert.ToInt32(Console.ReadLine());
-//    s1 += t;
-//}
-//Console.WriteLine("Оценки студента 2");
-//int s2 = 0;
-//for (int i = 0; i < 5; i++)
-//{
-//    int t = Convert.ToInt32(Console.ReadLine());
-//    s2 += t;
-//}
-//Console.WriteLine("Оценки студента 3");
-//int s3 = 0;
-//for (int i = 0; i < 5; i++)
-//{
-//    int t = Convert.ToInt32(Console.ReadLine());
-//    s3 += t;
-//}
-//double av1 = s1 / 5;
-//double av2 = s2 / 5;
-//double av3 = s3 / 5;
-//Console.WriteLine($"Среднее студента 1: {av1}, Среднее студента 2: {av2}, Среднее студента 3: {av3}");
+//     if (com == "добавить")
+//     {
+//         Console.Write("Имя: ");
+//         string n = Console.ReadLine();
+//         Console.Write("Телефон: ");
+//         massive[n] = Console.ReadLine();
+//     }
+//     else if (com == "поиск")
+//     {
+//         Console.Write("Имя: ");
+//         string n = Console.ReadLine();
+//         Console.WriteLine(massive.ContainsKey(n) ? massive[n]:"Не найдено!");
+//     }
+//     else if (com == "показать")
+//     {
+//         foreach(var i in massive)
+//         {
+//             Console.WriteLine($"{i.Key} - {i.Value}");
+//         }
+//     }
+//     else
+//     {
+//         Console.WriteLine("Нет такой команды!");
+//     }
+// }
 
 //Задание 5
+Dictionary<string, int> fruits = new Dictionary<string, int>();
+string[] a = {"яблоко", "банан", "яблоко", "груша", "банан", "слива"};
 
-//int[,] matrix = new int[3, 3];
-//int[,] new_matrix = new int[3, 3];
-//string input = Console.ReadLine();
-//string[] numbers = input.Split(' ');
-
-//int a = 0;
-//for (int i = 0; i < 3; i++)
-//{
-//    for (int j = 0; j < 3; j++)
-//    {
-//        matrix[i, j] = Convert.ToInt32(numbers[a]);
-//        a++;
-//    }
-//}
-//for(int i = 0; i < 3; i++)
-//{
-//    for (int j = 0;j < 3; j++)
-//    {
-//        new_matrix[j, i] = matrix[i, j];
-//    }
-//}
-
-//for (int i = 0; i < 3; i++)
-//{
-//    for (int j = 0; j < 3; j++)
-//    {
-//        Console.Write(matrix[i, j] + " ");
-//    }
-//    Console.WriteLine();
-//}
-//Console.WriteLine();
-//for (int i = 0; i < 3; i++)
-//{
-//    for (int j = 0; j < 3; j++)
-//    {
-//        Console.Write(new_matrix[i, j] + " ");
-//    }
-//    Console.WriteLine();
-//}
+foreach(var i in a)
+{
+    if (fruits.ContainsKey(i))
+    {
+        fruits[i]++;
+        Console.WriteLine($"Слово {i} есть. Теперь количество - {fruits[i]}");
+    }
+    else
+    {
+        fruits.Add(i, 1);
+        Console.WriteLine($"Новое слово {i} добавлено.");
+    }
+}
+foreach(var j in fruits)
+{
+    Console.WriteLine($"{j.Key} - {j.Value}");
+}
